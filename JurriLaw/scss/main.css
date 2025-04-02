@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.container [class^=child_] {
+  border: 1px solid black;
+  padding: 1rem 1rem;
+}
+.container > *:nth-child(1), .container :nth-child(4) {
+  background-color: #132030;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  color: white;
+}
+.container > *:nth-child(1) [class^=child_1__], .container :nth-child(4) [class^=child_1__] {
+  border: none;
+}
+.container > *:nth-child(1) .child_1__details p, .container :nth-child(4) .child_1__details p {
+  color: rgb(197, 167, 136);
+}
+.container > *:nth-child(1) .child_1__details h1, .container :nth-child(4) .child_1__details h1 {
+  width: 100%;
+  font-size: 2.5rem;
+  margin-top: 1.7rem;
+}
+.container > *:nth-child(1) .child_1__links a, .container :nth-child(4) .child_1__links a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 2px solid white;
+  padding: 0.2rem 0;
+  font-size: 0.7rem;
+}
+.container > *:nth-child(2) {
+  grid-column: span 2;
+  background-image: url(https://cdn.prod.website-files.com/65f80bd605784d8921fd6bf9/65fbd188e73a2498df897aef_case-01.webp);
+  background-size: cover;
+  background-position: center;
+  border: none;
+}
+.container > *:nth-child(3) {
+  grid-column: span 2;
+  background-image: url(https://cdn.prod.website-files.com/65f80bd605784d8921fd6bf9/65fbd174536ff7cb226609ac_case-02.webp);
+  background-size: cover;
+  background-position: center;
+  border: none;
+}
+
+.top_nav {
+  padding: 0.5rem 1.5rem;
+  background-color: #132030;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.top_nav__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.top_nav__left p {
+  font-size: 0.7rem;
+}
+.top_nav__left p:last-child {
+  display: none;
+}
+.top_nav__left .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: -25px;
+  color: #ead3bc;
+}
+.top_nav__left #icon-2 {
+  display: none;
+}
+
+.nav {
+  border-bottom: 0.8px solid grey;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.nav__right a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+.nav__right a:last-child {
+  background-color: #ead3bc;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+}
+.nav__right a:not(:last-child) {
+  display: none;
+}
+.nav__right a:nth-child(6) {
+  display: block;
+  background-color: #ead3bc;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+}
+.nav__right a:not(:last-child):hover {
+  transform: translateX(-10px);
+}
+.nav__right .ham {
+  font-size: 2rem;
+}
+
+.text_content {
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.text_content h1 {
+  width: 100%;
+  font-size: 2.5rem;
+  font-family: var(--font-1);
+  font-weight: 300;
+  line-height: 1;
+}
+.text_content p {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
+@media (min-width: 479px) {
+  .top_nav {
+    padding: 0.5rem 1.5rem;
+    background-color: #132030;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+  .top_nav__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  .top_nav__left p {
+    font-size: 0.7rem;
+  }
+  .top_nav__left p:last-child {
+    display: block;
+  }
+  .top_nav__left .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: -25px;
+    color: #ead3bc;
+  }
+  .top_nav__left #icon-2 {
+    display: block;
+  }
+}
+@media (min-width: 990px) {
+  .top_nav {
+    padding: 1rem 1.5rem;
+    background-color: #132030;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .top_nav__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  .top_nav__left p {
+    font-size: 1rem;
+  }
+  .top_nav__left .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: -25px;
+    color: #ead3bc;
+  }
+  .nav {
+    border-bottom: 0.8px solid grey;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  .nav__right a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+    transition: all 0.3s;
+  }
+  .nav__right a:not(:last-child) {
+    display: block;
+  }
+  .nav__right a:nth-child(6) {
+    display: block;
+    background-color: #ead3bc;
+    padding: 0.3rem 0.6rem;
+    border-radius: 50%;
+  }
+  .nav__right a:not(:last-child):hover {
+    transform: translateX(-10px);
+  }
+  .nav__right .ham {
+    display: none;
+  }
+  .text_content {
+    padding: 5rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .text_content h1 {
+    width: 60%;
+    font-size: 5.5rem;
+    font-family: var(--font-1);
+    font-weight: 300;
+    line-height: 1;
+  }
+  .text_content p {
+    width: 40%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 0.6;
+    line-height: 1.5;
+  }
+  .image_content {
+    width: 100%;
+    height: 37.5rem;
+    background-image: url(https://assets-global.website-files.com/65f80bd605784d8921fd6bca/65f848d8cc1c85148c62ff3e_home-hero.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .image_content .label {
+    width: 200px;
+    height: 250px;
+    background-color: green;
+    background-image: url(https://cdn.prod.website-files.com/65f80bd605784d8921fd6bca/65f84909692a2d1ce13e87f1_award.webp);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 3rem;
+    bottom: 3rem;
+  }
+}
+:root {
+  --font-1: "Frank Ruhl Libre", serif;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}

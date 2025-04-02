@@ -1,0 +1,288 @@
+.top_nav{
+    padding: 0.5rem 1.5rem;
+    background-color: #132030;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    &__left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        p{
+            font-size: 0.7rem;
+
+            &:last-child{
+                display: none;
+            }
+        }
+
+        .icon{
+            width: 20px;
+            height: 20px;
+            // border: 1px solid white;
+            margin-right: -25px;
+            color: #ead3bc;
+        }
+
+        #icon-2{
+            display: none;
+        }
+    }
+
+   
+}
+
+
+.nav{
+    border-bottom: 0.8px solid grey;
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        a{
+           
+            text-decoration: none;
+            color: black;
+            opacity: 0.8;
+
+            &:last-child{
+                background-color: #ead3bc;
+                padding: 0.3rem 0.6rem;
+                border-radius: 50%;
+            }
+
+            transition: all 0.3s;
+
+            &:not(:last-child){
+                display: none;
+            }
+
+            &:nth-child(6){
+                display: block;
+                background-color: #ead3bc;
+                padding: 0.3rem 0.6rem;
+                border-radius: 50%;
+            }
+        }
+        a:not(:last-child){
+            &:hover{
+                transform: translateX(-10px);
+            }
+        }
+        
+        .ham{
+            font-size: 2rem;
+        }
+    }
+}
+
+
+.text_content{
+    padding: 2rem 2rem;
+    // background-color: green;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: flex-end;
+    gap: 1.5rem;
+
+    h1{
+        width: 100%;
+        font-size: 2.5rem;
+        font-family: var(--font-1);
+        font-weight: 300;
+        line-height: 1;
+    }
+    p{
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 500;
+        opacity: 0.6;
+        line-height: 1.5;
+    }
+}
+
+
+
+
+
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// ! MEDIA QUERY
+
+// ! Tablet 
+@media (min-width:479px){
+    .top_nav{
+        padding: 0.5rem 1.5rem;
+        background-color: #132030;
+        color: white;
+        display: flex;
+        justify-content: center;
+    
+        &__left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            font-weight: 100;
+            text-transform: uppercase;
+            p{
+                font-size: 0.7rem;
+
+                &:last-child{
+                    display: block;
+                }
+            }
+
+            
+    
+            .icon{
+                width: 20px;
+                height: 20px;
+                // border: 1px solid white;
+                margin-right: -25px;
+                color: #ead3bc;
+            }
+            #icon-2{
+                display: block;
+            }
+        }
+    
+       
+    }
+}
+
+// ! DESKTOP
+@media (min-width:990px){
+    .top_nav{
+        padding: 1rem 1.5rem;
+        background-color: #132030;
+        color: white;
+        display: flex;
+        justify-content: flex-end;
+        &__left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            font-weight: 100;
+            text-transform: uppercase;
+            p{
+                font-size: 1rem;
+            }
+    
+            .icon{
+                width: 20px;
+                height: 20px;
+                // border: 1px solid white;
+                margin-right: -25px;
+                color: #ead3bc;
+            }
+        }
+    
+       
+    }
+    
+    .nav{
+        border-bottom: 0.8px solid grey;
+        padding: 1rem 2rem;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    
+        &__right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+    
+            a{
+                
+                text-decoration: none;
+                color: black;
+                opacity: 0.8;
+    
+                
+    
+                transition: all 0.3s;
+
+                &:not(:last-child){
+                    display: block;
+                }
+                &:nth-child(6){
+                    display: block;
+                    background-color: #ead3bc;
+                    padding: 0.3rem 0.6rem;
+                    border-radius: 50%;
+                }
+            }
+            a:not(:last-child){
+                &:hover{
+                    transform: translateX(-10px);
+                }
+            }
+            .ham{
+                display: none;
+            }
+        }
+    }
+    
+    .text_content{
+        padding: 5rem 4rem;
+        // background-color: green;
+    
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    
+        h1{
+            width: 60%;
+            font-size: 5.5rem;
+            font-family: var(--font-1);
+            font-weight: 300;
+            line-height: 1;
+        }
+        p{
+            width: 40%;
+            font-size: 1.4rem;
+            font-weight: 500;
+            opacity: 0.6;
+            line-height: 1.5;
+        }
+    }
+    
+    .image_content{
+        width: 100%;
+        height: 37.5rem;
+        background-image: url(https://assets-global.website-files.com/65f80bd605784d8921fd6bca/65f848d8cc1c85148c62ff3e_home-hero.webp);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        .label{
+            width: 200px;
+            height: 250px;
+            background-color: green;
+            background-image: url(https://cdn.prod.website-files.com/65f80bd605784d8921fd6bca/65f84909692a2d1ce13e87f1_award.webp);
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            left: 3rem;
+            bottom: 3rem;
+        }
+    }
+}
